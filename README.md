@@ -22,9 +22,9 @@ Quick-commerce platforms rely on tight inventory control, accurate pricing tiers
 
 ## Tech Stack & Tools
 
-* **Database & Querying:** PostgreSQL (DDL, Data Cleaning, Aggregations, Conditional Logic)
-* **Data Visualization & BI:** Microsoft Power BI Desktop (DAX Measures, Top-N Filtering, Executive KPI Cards)
-* **Dataset:** `zepto_v2.csv` (3,731 active SKUs across 14 categories)
+- **Database & Querying:** PostgreSQL (DDL, Data Cleaning, Aggregations, Conditional Logic)
+- **Data Visualization & BI:** Microsoft Power BI Desktop (DAX Measures, Top-N Filtering, Executive KPI Cards)
+- **Dataset:** `zepto_v2.csv` (3,731 active SKUs across 14 categories)
 
 ---
 
@@ -47,14 +47,14 @@ The PostgreSQL script (`Zepto Project.sql`) is organized into three structured p
 1. **Phase 1 — Data Exploration:** Row count validation (`3,732` raw rows), `NULL` checks across critical attributes, category distribution (`14` categories), stock status breakdown, and multi-SKU product detection.
 2. **Phase 2 — Data Cleaning:** Filtering corrupted `0` MRP entries (`3,731` valid records retained) and standardizing `mrp` and `discountedSellingPrice` from paise to INR (`/ 100.0`).
 3. **Phase 3 — Business Analysis (8 Core Queries):**
-   * **Q1:** Top 10 best-value SKUs by discount percentage.
-   * **Q2:** High-MRP (`> ₹300`) products currently out of stock.
-   * **Q3:** Estimated revenue (`discountedSellingPrice × availableQuantity`) by category.
-   * **Q4:** Premium products (`MRP > ₹500`) with minimal discounts (`< 10%`).
-   * **Q5:** Top 5 categories by average discount percentage.
-   * **Q6:** Price-per-gram value ranking for products above `100g`.
-   * **Q7:** Product weight tier segmentation (`Low < 1kg`, `Medium 1kg–<5kg`, `Bulk >= 5kg`).
-   * **Q8:** Total available inventory weight (grams and kilograms) per category.
+  - **Q1:** Top 10 best-value SKUs by discount percentage.
+  - **Q2:** High-MRP (`> ₹300`) products currently out of stock.
+  - **Q3:** Estimated revenue (`discountedSellingPrice × availableQuantity`) by category.
+  - **Q4:** Premium products (`MRP > ₹500`) with minimal discounts (`< 10%`).
+  - **Q5:** Top 5 categories by average discount percentage.
+  - **Q6:** Price-per-gram value ranking for products above `100g`.
+  - **Q7:** Product weight tier segmentation (`Low < 1kg`, `Medium 1kg–<5kg`, `Bulk >= 5kg`).
+  - **Q8:** Total available inventory weight (grams and kilograms) per category.
 
 ---
 
@@ -65,6 +65,7 @@ The PostgreSQL script (`Zepto Project.sql`) is organized into three structured p
 ├── Zepto Project.sql
 ├── zepto_dashboard.png
 └── zepto_v2.csv
+```
 
 ---
 
